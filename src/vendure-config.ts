@@ -88,7 +88,7 @@ export const config: VendureConfig = {
     CloudTasksPlugin.init({
       taskHandlerHost: process.env.WORKER_HOST,
       projectId: process.env.GCLOUD_PROJECT,
-      location: "europe-west1",
+      location: "northamerica-northeast2-c",
       authSecret: process.env.CLOUD_TASKS_SECRET,
       queueSuffix: process.env.APP_ENV,
     }),
