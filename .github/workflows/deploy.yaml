@@ -6,7 +6,7 @@ on:
       - main
 
 env:
-  GCLOUD_PROJECT: your-project
+  GCLOUD_PROJECT: fourth-buffer-385801
 
 jobs:
 
@@ -31,8 +31,8 @@ jobs:
     strategy:
       matrix:
         instances: [
-          { name: "your-project-api", db: "prod-db", secret: "ENV_PROD", memory: "2G"},
-          { name: "your-project-worker", db: "prod-db", secret: "ENV_PROD", memory: "2G"},
+          { name: "vendure-api", db: "prod-db", secret: "ENV_PROD", memory: "2G"},
+          { name: "vendure-worker", db: "prod-db", secret: "ENV_PROD", memory: "2G"},
         ]
     runs-on: ubuntu-latest
     steps:
@@ -56,8 +56,8 @@ jobs:
     strategy:
       matrix:
         instances: [
-          { name: "your-project-test-api", db: "test-db", secret: "ENV_TEST", memory: "1G"},
-          { name: "your-project-test-worker", db: "test-db", secret: "ENV_TEST", memory: "1G"},
+          { name: "vendure-test-api", db: "test-db", secret: "ENV_TEST", memory: "1G"},
+          { name: "vendure-test-worker", db: "test-db", secret: "ENV_TEST", memory: "1G"},
         ]
     runs-on: ubuntu-latest
     steps:
