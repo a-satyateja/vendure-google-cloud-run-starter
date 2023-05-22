@@ -46,7 +46,7 @@ jobs:
       - run: 'echo "$SECRET_VARS" > .env'
         env:
           SECRET_VARS: ${{secrets[matrix.instances.secret]}}
-      - run: ./deploy.sh ${{ matrix.instances.name }} ${{ matrix.instances.db }} ${{ matrix.instances.memory }}
+      - run: ./deploy.sh ${{ matrix.instances.name }} ${{ matrix.instances.db }} ${{ matrix.instances.memory }} fourth-buffer-385801
 
   deploy-test:
     if: ${{ github.ref == 'refs/heads/develop' }}
@@ -71,4 +71,4 @@ jobs:
       - run: 'echo "$SECRET_VARS" > .env'
         env:
           SECRET_VARS: ${{secrets[matrix.instances.secret]}}
-      - run: ./deploy.sh ${{ matrix.instances.name }} ${{ matrix.instances.db }} ${{ matrix.instances.memory }} $GCLOUD_PROJECT
+      - run: ./deploy.sh ${{ matrix.instances.name }} ${{ matrix.instances.db }} ${{ matrix.instances.memory }} fourth-buffer-385801
